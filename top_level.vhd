@@ -143,7 +143,7 @@ gcontraxt: PWM  Generic map(
       IF(lcd_busy = '0' AND lcd_enable = '0') THEN
 	  
         IF(char < 50000000) THEN
-		  if char<26 then 
+		  if char<27 then 
 		   lcd_enable<='1';
 			end if;
           char := char + 1;
@@ -170,12 +170,12 @@ gcontraxt: PWM  Generic map(
 			 when 19 =>lcd_bus<="10"&months(23 downto 16);
 			 when 20 =>lcd_bus<="10"&months(15 downto 8);
 			 when 21 =>lcd_bus<="10"&months(7 downto 0);
-			 when 22 =>lcd_bus<="1000110010";
-			 when 23 =>lcd_bus<="1000110000";
-			 when 24 =>lcd_bus<="10"&year(15 downto 8);
-			 when 25 =>lcd_bus<="10"&year(7 downto 0);
-			 
-			 when 26 => lcd_bus<=  "0000000010";
+			 when 22 =>lcd_bus<="1010100000";
+			 when 23 =>lcd_bus<="1000110010";
+			 when 24 =>lcd_bus<="1000110000";
+			 when 25 =>lcd_bus<="10"&year(15 downto 8);
+			 when 26 =>lcd_bus<="10"&year(7 downto 0);
+			 when 27 => lcd_bus<=  "0000000010";
 			 when 50000000=>char:=0;
           WHEN OTHERS => lcd_enable <= '0'; 
         END CASE;

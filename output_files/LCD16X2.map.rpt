@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LCD16X2
-Sat Aug 14 21:45:08 2021
+Sat Aug 14 22:00:00 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Aug 14 21:45:08 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sat Aug 14 22:00:00 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; LCD16X2                                     ;
 ; Top-level Entity Name           ; top_level                                   ;
@@ -191,14 +191,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 329         ;
+; Estimate of Logic utilization (ALMs needed) ; 320         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 489         ;
+; Combinational ALUT usage for logic          ; 482         ;
 ;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 166         ;
-;     -- 5 input functions                    ; 45          ;
-;     -- 4 input functions                    ; 91          ;
-;     -- <=3 input functions                  ; 187         ;
+;     -- 6 input functions                    ; 155         ;
+;     -- 5 input functions                    ; 48          ;
+;     -- 4 input functions                    ; 90          ;
+;     -- <=3 input functions                  ; 189         ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 218         ;
 ;                                             ;             ;
@@ -208,8 +208,8 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clkin~input ;
 ; Maximum fan-out                             ; 171         ;
-; Total fan-out                               ; 2708        ;
-; Average fan-out                             ; 3.66        ;
+; Total fan-out                               ; 2658        ;
+; Average fan-out                             ; 3.63        ;
 +---------------------------------------------+-------------+
 
 
@@ -218,7 +218,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name    ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+----------------+--------------+
-; |top_level                 ; 489 (299)           ; 218 (129)                 ; 0                 ; 0          ; 16   ; 0            ; |top_level                    ; top_level      ; work         ;
+; |top_level                 ; 482 (292)           ; 218 (129)                 ; 0                 ; 0          ; 16   ; 0            ; |top_level                    ; top_level      ; work         ;
 ;    |PWM:gcontraxt|         ; 56 (56)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |top_level|PWM:gcontraxt      ; PWM            ; work         ;
 ;    |lcd_controller:dut|    ; 134 (134)           ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |top_level|lcd_controller:dut ; lcd_controller ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+----------------+--------------+
@@ -311,30 +311,30 @@ Encoding Type:  One-Hot
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
 ; lcd_controller:dut|busy                 ; 2       ;
-; months[40]                              ; 1       ;
-; months[32]                              ; 1       ;
-; months[56]                              ; 1       ;
-; months[25]                              ; 2       ;
 ; apm[10]                                 ; 3       ;
-; m0[0]                                   ; 6       ;
 ; m1[0]                                   ; 5       ;
+; months[40]                              ; 1       ;
 ; h1[0]                                   ; 8       ;
-; months[65]                              ; 1       ;
-; months[49]                              ; 1       ;
+; months[56]                              ; 1       ;
+; m0[0]                                   ; 6       ;
+; months[25]                              ; 2       ;
+; months[32]                              ; 1       ;
 ; h0[1]                                   ; 7       ;
+; months[49]                              ; 1       ;
+; months[65]                              ; 1       ;
+; m1[2]                                   ; 5       ;
 ; months[42]                              ; 1       ;
 ; months[50]                              ; 1       ;
-; m1[2]                                   ; 5       ;
 ; months[51]                              ; 1       ;
-; m0[3]                                   ; 6       ;
-; months[19]                              ; 1       ;
 ; months[67]                              ; 1       ;
+; months[19]                              ; 1       ;
+; m0[3]                                   ; 6       ;
 ; months[44]                              ; 1       ;
 ; months[28]                              ; 1       ;
 ; months[20]                              ; 1       ;
 ; months[46]                              ; 1       ;
-; months[30]                              ; 1       ;
 ; months[22]                              ; 1       ;
+; months[30]                              ; 1       ;
 ; months[15]                              ; 1       ;
 ; month[0]                                ; 45      ;
 ; Total number of inverted registers = 27 ;         ;
@@ -415,20 +415,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR SLD      ; 8                           ;
 ;     SCLR              ; 50                          ;
 ;     plain             ; 60                          ;
-; arriav_lcell_comb     ; 489                         ;
+; arriav_lcell_comb     ; 482                         ;
 ;     arith             ; 120                         ;
 ;         1 data inputs ; 120                         ;
-;     normal            ; 369                         ;
+;     normal            ; 362                         ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 26                          ;
-;         3 data inputs ; 40                          ;
-;         4 data inputs ; 91                          ;
-;         5 data inputs ; 45                          ;
-;         6 data inputs ; 166                         ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 41                          ;
+;         4 data inputs ; 90                          ;
+;         5 data inputs ; 48                          ;
+;         6 data inputs ; 155                         ;
 ; boundary_port         ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.50                        ;
-; Average LUT depth     ; 4.85                        ;
+; Average LUT depth     ; 4.81                        ;
 +-----------------------+-----------------------------+
 
 
@@ -447,7 +447,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Aug 14 21:44:27 2021
+    Info: Processing started: Sat Aug 14 21:59:36 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LCD16X2 -c LCD16X2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -482,14 +482,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "constrastdown" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 36
-Info (21057): Implemented 546 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 539 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 530 logic cells
+    Info (21061): Implemented 523 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 1009 megabytes
-    Info: Processing ended: Sat Aug 14 21:45:08 2021
-    Info: Elapsed time: 00:00:41
-    Info: Total CPU time (on all processors): 00:00:47
+    Info: Peak virtual memory: 1010 megabytes
+    Info: Processing ended: Sat Aug 14 22:00:00 2021
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:45
 
 

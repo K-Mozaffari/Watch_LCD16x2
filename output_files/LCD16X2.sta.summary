@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 100C Model Setup 'clkin'
+Slack : -7.075
+TNS   : -1031.595
+
+Type  : Slow 1100mV 100C Model Setup 'constrastup'
+Slack : -1.060
+TNS   : -43.716
+
+Type  : Slow 1100mV 100C Model Hold 'clkin'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Hold 'constrastup'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'clkin'
+Slack : -0.538
+TNS   : -175.034
+
+Type  : Slow 1100mV 100C Model Minimum Pulse Width 'constrastup'
+Slack : -0.538
+TNS   : -46.080
+
+Type  : Slow 1100mV -40C Model Setup 'clkin'
+Slack : -7.064
+TNS   : -1040.222
+
+Type  : Slow 1100mV -40C Model Setup 'constrastup'
+Slack : -1.085
+TNS   : -42.918
+
+Type  : Slow 1100mV -40C Model Hold 'clkin'
+Slack : 0.362
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Hold 'constrastup'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'clkin'
+Slack : -0.538
+TNS   : -186.392
+
+Type  : Slow 1100mV -40C Model Minimum Pulse Width 'constrastup'
+Slack : -0.538
+TNS   : -41.778
+
+Type  : Fast 1100mV 100C Model Setup 'clkin'
+Slack : -3.078
+TNS   : -400.715
+
+Type  : Fast 1100mV 100C Model Setup 'constrastup'
+Slack : -0.151
+TNS   : -1.075
+
+Type  : Fast 1100mV 100C Model Hold 'clkin'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Hold 'constrastup'
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'constrastup'
+Slack : -0.321
+TNS   : -17.025
+
+Type  : Fast 1100mV 100C Model Minimum Pulse Width 'clkin'
+Slack : -0.093
+TNS   : -19.322
+
+Type  : Fast 1100mV -40C Model Setup 'clkin'
+Slack : -2.570
+TNS   : -321.773
+
+Type  : Fast 1100mV -40C Model Setup 'constrastup'
+Slack : -0.018
+TNS   : -0.018
+
+Type  : Fast 1100mV -40C Model Hold 'clkin'
+Slack : 0.164
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Hold 'constrastup'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'constrastup'
+Slack : -0.301
+TNS   : -16.008
+
+Type  : Fast 1100mV -40C Model Minimum Pulse Width 'clkin'
+Slack : -0.092
+TNS   : -19.163
+
+------------------------------------------------------------
