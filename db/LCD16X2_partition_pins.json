@@ -58,6 +58,22 @@
 				{
 					"name" : "clkin",
 					"strict" : false
+				},
+				{
+					"name" : "s_min",
+					"strict" : false
+				},
+				{
+					"name" : "s_hour",
+					"strict" : false
+				},
+				{
+					"name" : "s_month",
+					"strict" : false
+				},
+				{
+					"name" : "s_year",
+					"strict" : false
 				}
 			]
 		}
