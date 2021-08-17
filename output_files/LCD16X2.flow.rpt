@@ -1,5 +1,5 @@
 Flow report for LCD16X2
-Mon Aug 16 02:13:04 2021
+Tue Aug 17 02:04:44 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Aug 16 02:13:04 2021       ;
+; Flow Status                     ; Successful - Tue Aug 17 02:04:44 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; LCD16X2                                     ;
 ; Top-level Entity Name           ; top_level                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEBA6U23I7                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 409 / 41,910 ( < 1 % )                      ;
-; Total registers                 ; 225                                         ;
+; Logic utilization (in ALMs)     ; 404 / 41,910 ( < 1 % )                      ;
+; Total registers                 ; 220                                         ;
 ; Total pins                      ; 19 / 314 ( 6 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/16/2021 02:10:42 ;
+; Start date & time ; 08/17/2021 02:02:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LCD16X2             ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ refer to the applicable agreement for further details.
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION  ; On                                     ; Off           ; --          ; --             ;
-; COMPILER_SIGNATURE_ID               ; 97351239503163.162909424205084         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 193866612709651.162918014005259        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -105,12 +105,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 1030 MB             ; 00:00:47                           ;
-; Fitter               ; 00:01:20     ; 1.0                     ; 2129 MB             ; 00:02:13                           ;
-; Assembler            ; 00:00:11     ; 1.0                     ; 964 MB              ; 00:00:10                           ;
-; Timing Analyzer      ; 00:00:14     ; 1.2                     ; 1199 MB             ; 00:00:12                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 1118 MB             ; 00:00:02                           ;
-; Total                ; 00:02:16     ; --                      ; --                  ; 00:03:24                           ;
+; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 1028 MB             ; 00:00:47                           ;
+; Fitter               ; 00:01:16     ; 1.0                     ; 2127 MB             ; 00:02:06                           ;
+; Assembler            ; 00:00:11     ; 1.0                     ; 955 MB              ; 00:00:10                           ;
+; Timing Analyzer      ; 00:00:13     ; 1.1                     ; 1200 MB             ; 00:00:12                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 1120 MB             ; 00:00:02                           ;
+; Total                ; 00:02:18     ; --                      ; --                  ; 00:03:17                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for LCD16X2
-Mon Aug 16 02:11:12 2021
+Tue Aug 17 02:02:57 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -19,23 +19,24 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: PWM:gcontraxt
- 15. Parameter Settings for User Entity Instance: lcd_controller:dut
- 16. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod4
- 17. Parameter Settings for Inferred Entity Instance: lpm_divide:Div4
- 18. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod3
- 19. Parameter Settings for Inferred Entity Instance: lpm_divide:Div3
- 20. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2
- 21. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
- 22. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
- 23. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
- 24. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 25. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 26. Port Connectivity Checks: "lcd_controller:dut"
- 27. Port Connectivity Checks: "PWM:gcontraxt"
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |top_level
+ 15. Parameter Settings for User Entity Instance: PWM:gcontraxt
+ 16. Parameter Settings for User Entity Instance: lcd_controller:dut
+ 17. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod4
+ 18. Parameter Settings for Inferred Entity Instance: lpm_divide:Div4
+ 19. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod3
+ 20. Parameter Settings for Inferred Entity Instance: lpm_divide:Div3
+ 21. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod2
+ 22. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
+ 23. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod1
+ 24. Parameter Settings for Inferred Entity Instance: lpm_divide:Div1
+ 25. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 26. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 27. Port Connectivity Checks: "lcd_controller:dut"
+ 28. Port Connectivity Checks: "PWM:gcontraxt"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -61,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Aug 16 02:11:12 2021       ;
+; Analysis & Synthesis Status     ; Successful - Tue Aug 17 02:02:57 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; LCD16X2                                     ;
 ; Top-level Entity Name           ; top_level                                   ;
@@ -223,12 +224,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Estimate of Logic utilization (ALMs needed) ; 415         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 681         ;
+; Combinational ALUT usage for logic          ; 682         ;
 ;     -- 7 input functions                    ; 0           ;
 ;     -- 6 input functions                    ; 146         ;
-;     -- 5 input functions                    ; 66          ;
-;     -- 4 input functions                    ; 78          ;
-;     -- <=3 input functions                  ; 391         ;
+;     -- 5 input functions                    ; 65          ;
+;     -- 4 input functions                    ; 82          ;
+;     -- <=3 input functions                  ; 389         ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 183         ;
 ;                                             ;             ;
@@ -238,8 +239,8 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clkin~input ;
 ; Maximum fan-out                             ; 183         ;
-; Total fan-out                               ; 3003        ;
-; Average fan-out                             ; 3.33        ;
+; Total fan-out                               ; 3013        ;
+; Average fan-out                             ; 3.34        ;
 +---------------------------------------------+-------------+
 
 
@@ -248,7 +249,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name         ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top_level                             ; 681 (283)           ; 183 (94)                  ; 0                 ; 0          ; 19   ; 0            ; |top_level                                                                                                 ; top_level           ; work         ;
+; |top_level                             ; 682 (284)           ; 183 (94)                  ; 0                 ; 0          ; 19   ; 0            ; |top_level                                                                                                 ; top_level           ; work         ;
 ;    |PWM:gcontraxt|                     ; 56 (56)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |top_level|PWM:gcontraxt                                                                                   ; PWM                 ; work         ;
 ;    |lcd_controller:dut|                ; 135 (135)           ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |top_level|lcd_controller:dut                                                                              ; lcd_controller      ; work         ;
 ;    |lpm_divide:Div0|                   ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_level|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
@@ -344,7 +345,7 @@ Encoding Type:  One-Hot
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 88    ;
+; Number of registers using Clock Enable       ; 92    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -355,8 +356,8 @@ Encoding Type:  One-Hot
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; lcd_controller:dut|busy                ; 1       ;
-; month[0]                               ; 18      ;
-; hour[0]                                ; 7       ;
+; month[0]                               ; 20      ;
+; hour[0]                                ; 9       ;
 ; day[0]                                 ; 9       ;
 ; apm[10]                                ; 4       ;
 ; year[2]                                ; 10      ;
@@ -382,6 +383,16 @@ Encoding Type:  One-Hot
 ; 14:1               ; 8 bits    ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |top_level|lcd_controller:dut|lcd_data[2]   ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |top_level|year[2]                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top_level ;
++----------------+----------+-----------------------------------------------+
+; Parameter Name ; Value    ; Type                                          ;
++----------------+----------+-----------------------------------------------+
+; FRQ            ; 50000000 ; Signed Integer                                ;
++----------------+----------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------+
@@ -670,24 +681,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 183                         ;
-;     ENA               ; 36                          ;
+;     ENA               ; 40                          ;
 ;     ENA SCLR          ; 44                          ;
 ;     ENA SCLR SLD      ; 8                           ;
 ;     SCLR              ; 76                          ;
-;     plain             ; 19                          ;
-; arriav_lcell_comb     ; 681                         ;
+;     plain             ; 15                          ;
+; arriav_lcell_comb     ; 682                         ;
 ;     arith             ; 221                         ;
 ;         0 data inputs ; 28                          ;
 ;         1 data inputs ; 134                         ;
 ;         2 data inputs ; 16                          ;
 ;         3 data inputs ; 34                          ;
 ;         4 data inputs ; 9                           ;
-;     normal            ; 410                         ;
+;     normal            ; 411                         ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 78                          ;
-;         3 data inputs ; 50                          ;
-;         4 data inputs ; 69                          ;
-;         5 data inputs ; 66                          ;
+;         2 data inputs ; 77                          ;
+;         3 data inputs ; 49                          ;
+;         4 data inputs ; 73                          ;
+;         5 data inputs ; 65                          ;
 ;         6 data inputs ; 146                         ;
 ;     shared            ; 50                          ;
 ;         0 data inputs ; 10                          ;
@@ -695,7 +706,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 19                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.50                        ;
-; Average LUT depth     ; 5.84                        ;
+; Average LUT depth     ; 5.81                        ;
 +-----------------------+-----------------------------+
 
 
@@ -704,7 +715,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -714,7 +725,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Aug 16 02:10:42 2021
+    Info: Processing started: Tue Aug 17 02:02:19 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LCD16X2 -c LCD16X2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -722,8 +733,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file PWM.vhd
     Info (12022): Found design unit 1: PWM-behavior File: /home/kamal/Desktop/LCD/PWM.vhd Line: 35
     Info (12023): Found entity 1: PWM File: /home/kamal/Desktop/LCD/PWM.vhd Line: 22
 Info (12021): Found 2 design units, including 1 entities, in source file top_level.vhd
-    Info (12022): Found design unit 1: top_level-behavior File: /home/kamal/Desktop/LCD/top_level.vhd Line: 45
-    Info (12023): Found entity 1: top_level File: /home/kamal/Desktop/LCD/top_level.vhd Line: 30
+    Info (12022): Found design unit 1: top_level-behavior File: /home/kamal/Desktop/LCD/top_level.vhd Line: 23
+    Info (12023): Found entity 1: top_level File: /home/kamal/Desktop/LCD/top_level.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file lcd_controller.vhd
     Info (12022): Found design unit 1: lcd_controller-controller File: /home/kamal/Desktop/LCD/lcd_controller.vhd Line: 49
     Info (12023): Found entity 1: lcd_controller File: /home/kamal/Desktop/LCD/lcd_controller.vhd Line: 29
@@ -733,22 +744,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
 Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
     Info (12023): Found entity 1: pll_0002 File: /home/kamal/Desktop/LCD/pll/pll_0002.v Line: 2
 Info (12127): Elaborating entity "top_level" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at top_level.vhd(49): used explicit default value for signal "led_duty_cycle" because signal was never assigned a value File: /home/kamal/Desktop/LCD/top_level.vhd Line: 49
-Info (12128): Elaborating entity "PWM" for hierarchy "PWM:gcontraxt" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 112
-Info (12128): Elaborating entity "lcd_controller" for hierarchy "lcd_controller:dut" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 126
+Warning (10540): VHDL Signal Declaration warning at top_level.vhd(27): used explicit default value for signal "led_duty_cycle" because signal was never assigned a value File: /home/kamal/Desktop/LCD/top_level.vhd Line: 27
+Info (12128): Elaborating entity "PWM" for hierarchy "PWM:gcontraxt" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 91
+Info (12128): Elaborating entity "lcd_controller" for hierarchy "lcd_controller:dut" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 105
 Info (278001): Inferred 10 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod4" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 178
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div4" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 177
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod3" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 173
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div3" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 172
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 162
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 161
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 159
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 158
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 156
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 155
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod4" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 178
-Info (12133): Instantiated megafunction "lpm_divide:Mod4" with the following parameter: File: /home/kamal/Desktop/LCD/top_level.vhd Line: 178
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod4" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 157
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div4" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 156
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod3" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 152
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div3" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 151
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 141
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 140
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 138
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 137
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 135
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 134
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod4" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 157
+Info (12133): Instantiated megafunction "lpm_divide:Mod4" with the following parameter: File: /home/kamal/Desktop/LCD/top_level.vhd Line: 157
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -759,8 +770,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_bkh File: /home/kamal/Desktop/LCD/db/sign_div_unsign_bkh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sse.tdf
     Info (12023): Found entity 1: alt_u_div_sse File: /home/kamal/Desktop/LCD/db/alt_u_div_sse.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div4" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 177
-Info (12133): Instantiated megafunction "lpm_divide:Div4" with the following parameter: File: /home/kamal/Desktop/LCD/top_level.vhd Line: 177
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div4" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 156
+Info (12133): Instantiated megafunction "lpm_divide:Div4" with the following parameter: File: /home/kamal/Desktop/LCD/top_level.vhd Line: 156
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -771,8 +782,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_9kh File: /home/kamal/Desktop/LCD/db/sign_div_unsign_9kh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
     Info (12023): Found entity 1: alt_u_div_ose File: /home/kamal/Desktop/LCD/db/alt_u_div_ose.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod3" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 173
-Info (12133): Instantiated megafunction "lpm_divide:Mod3" with the following parameter: File: /home/kamal/Desktop/LCD/top_level.vhd Line: 173
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod3" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 152
+Info (12133): Instantiated megafunction "lpm_divide:Mod3" with the following parameter: File: /home/kamal/Desktop/LCD/top_level.vhd Line: 152
     Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -783,8 +794,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_akh File: /home/kamal/Desktop/LCD/db/sign_div_unsign_akh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_pse.tdf
     Info (12023): Found entity 1: alt_u_div_pse File: /home/kamal/Desktop/LCD/db/alt_u_div_pse.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div3" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 172
-Info (12133): Instantiated megafunction "lpm_divide:Div3" with the following parameter: File: /home/kamal/Desktop/LCD/top_level.vhd Line: 172
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div3" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 151
+Info (12133): Instantiated megafunction "lpm_divide:Div3" with the following parameter: File: /home/kamal/Desktop/LCD/top_level.vhd Line: 151
     Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -795,8 +806,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_8kh File: /home/kamal/Desktop/LCD/db/sign_div_unsign_8kh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mse.tdf
     Info (12023): Found entity 1: alt_u_div_mse File: /home/kamal/Desktop/LCD/db/alt_u_div_mse.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 156
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: /home/kamal/Desktop/LCD/top_level.vhd Line: 156
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 135
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: /home/kamal/Desktop/LCD/top_level.vhd Line: 135
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -807,8 +818,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_7kh File: /home/kamal/Desktop/LCD/db/sign_div_unsign_7kh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
     Info (12023): Found entity 1: alt_u_div_kse File: /home/kamal/Desktop/LCD/db/alt_u_div_kse.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 155
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: /home/kamal/Desktop/LCD/top_level.vhd Line: 155
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: /home/kamal/Desktop/LCD/top_level.vhd Line: 134
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: /home/kamal/Desktop/LCD/top_level.vhd Line: 134
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -816,7 +827,7 @@ Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following par
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
     Info (12023): Found entity 1: lpm_divide_1am File: /home/kamal/Desktop/LCD/db/lpm_divide_1am.tdf Line: 24
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "rw" is stuck at GND File: /home/kamal/Desktop/LCD/top_level.vhd Line: 33
+    Warning (13410): Pin "rw" is stuck at GND File: /home/kamal/Desktop/LCD/top_level.vhd Line: 11
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored 16 assignments for entity "pll" -- entity does not exist in design
     Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_pll -entity pll -sip pll.sip -library lib_pll was ignored
@@ -825,14 +836,14 @@ Warning (20013): Ignored 16 assignments for entity "pll" -- entity does not exis
 Warning (20013): Ignored 317 assignments for entity "pll_0002" -- entity does not exist in design
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 743 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 744 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 724 logic cells
+    Info (21061): Implemented 725 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 1039 megabytes
-    Info: Processing ended: Mon Aug 16 02:11:12 2021
-    Info: Elapsed time: 00:00:30
+    Info: Peak virtual memory: 1038 megabytes
+    Info: Processing ended: Tue Aug 17 02:02:57 2021
+    Info: Elapsed time: 00:00:38
     Info: Total CPU time (on all processors): 00:00:47
 
 

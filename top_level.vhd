@@ -1,33 +1,11 @@
---------------------------------------------------------------------------------
---
---   FileName:         lcd_example.vhd
---   Dependencies:     none
---   Design Software:  Quartus II 32-bit Version 11.1 Build 173 SJ Full Version
---
---   HDL CODE IS PROVIDED "AS IS."  DIGI-KEY EXPRESSLY DISCLAIMS ANY
---   WARRANTY OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT
---   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
---   PARTICULAR PURPOSE, OR NON-INFRINGEMENT. IN NO EVENT SHALL DIGI-KEY
---   BE LIABLE FOR ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL
---   DAMAGES, LOST PROFITS OR LOST DATA, HARM TO YOUR EQUIPMENT, COST OF
---   PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY OR SERVICES, ANY CLAIMS
---   BY THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF),
---   ANY CLAIMS FOR INDEMNITY OR CONTRIBUTION, OR OTHER SIMILAR COSTS.
---
---   Version History
---   Version 1.0 6/13/2012 Scott Larson
---     Initial Public Release
---
---   Prints "123456789" on a HD44780 compatible 8-bit interface character LCD 
---   module using the lcd_controller.vhd component.
---
---------------------------------------------------------------------------------
+
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all;
 use ieee.Std_Logic_Arith.all;
 ENTITY top_level IS
+	GENERIC (FRQ:INTEGER:=50000000);
   PORT(
         clkin           : IN    STD_LOGIC;  --system clock
         rw, rs, e       : OUT   STD_LOGIC;  --read/write, setup/data, and enable for lcd
@@ -104,6 +82,7 @@ signal pm,am	:	std_logic_vector(19 downto 0):=(others=>'0');
 signal apm		:	std_logic_vector(19 downto 0):="10011000011001101101";
 signal months	:	std_logic_vector(23 downto 0):="010010100110000101101110";
 signal set		:	std_logic_vector(3 downto 0):=(others=>'0');
+signal endday:integer range 28 to 31:=31;
 -------------------------------------------------------------------
 BEGIN
 
@@ -111,7 +90,7 @@ clk<=clkin;
 
 gcontraxt: PWM  Generic map(
 	                        BIT_DEPTH	=>4,        --: integer := 8;
-	                        INPUT_CLK	=>50000000, --: integer := 100000000; -- 50MHz
+	                        INPUT_CLK	=>FRQ, --: integer := 100000000; -- 50MHz
 	                        FREQ		=>300        --: integer := 50
                             ) -- 50Hz
                 Port map   (
@@ -139,13 +118,13 @@ gcontraxt: PWM  Generic map(
             );
   leddbkey<=constrastup;
   PROCESS(clk)
-    VARIABLE char  :  INTEGER RANGE 0 TO 50000000 := 0;
+    VARIABLE char  :  INTEGER RANGE 0 TO FRQ := 0;
   BEGIN
  
     IF(clk'EVENT AND clk = '1') THEN
       IF(lcd_busy = '0' AND lcd_enable = '0') THEN
 	  
-        IF(char < 50000000) THEN
+        IF(char < FRQ) THEN
 		  if char<27 then 
 		   lcd_enable<='1';
 			end if;
@@ -177,7 +156,7 @@ gcontraxt: PWM  Generic map(
 			 when 23 =>lcd_bus<="100011"&conv_std_logic_vector(year/10,4);
 			 when 24 =>lcd_bus<="100011"&conv_std_logic_vector(year mod 10,4) ;
 			 when 25 => lcd_bus<=  "0000000010";
-			 when 50000000=>char:=0;
+			 when FRQ=>char:=0;
           WHEN OTHERS => lcd_enable <= '0'; 
         END CASE;
       ELSE
@@ -189,11 +168,11 @@ gcontraxt: PWM  Generic map(
   
   set<=s_year&s_month&s_hour&s_min;
 process(clk,set)
-variable char: integer range 0 to 50000000 :=0;
+variable char: integer range 0 to FRQ :=0;
 begin 
 	
 		if rising_edge(clk) then ---1
-			if char<50000000 then ---2
+			if char<FRQ then ---2
 				char:=char+1;
 			else
 			char:=0;
@@ -208,7 +187,7 @@ begin
 									min<=min+1;
 								else 
 									min<=0;
-									if hour< 12 then 
+									if hour<11 then 
 										hour<=hour+1;
 									else 
 										hour<=1;
@@ -216,7 +195,7 @@ begin
 											apm<=pm;
 										else 
 											apm <=am;
-											if day <31 then
+											if day <endday then
 												day<=day+1;
 											else
 												day<=1;
@@ -245,7 +224,7 @@ begin
 							end if;
 							
 					WHEN "0010"=> --set 	
-							if hour< 12 then 
+							if hour<11 	then 
 								hour<=hour+1;
 							else 
 								hour<=1;
@@ -257,7 +236,7 @@ begin
 							end if;
 								
 					WHEN "0100" => --set day
-							if day <31 then
+							if day <endday then
 								day<=day+1;
 							else
 								day<=1;
@@ -286,30 +265,17 @@ end process;
 
 am<="1001100001"&"1001101101";
 pm<="1001110000"&"1001101101";
---January	- 31 days1
---February	- 28 days 2in a common year and 29 days in leap years
---March		- 31 days3
---April		- 30 days4
---May 		- 31 days5
---June		- 30 days6
---July		- 31 days7
---August		- 31 days8
---September - 30 days9
---October	- 31 days10
---November	- 30 days11
---December	- 31 days12
 
 process (month)
 
 begin 
-	case month is 
+case month is 
 		when 1 =>months<="01001010"&--J January
 							  "01100001"&--a
 							  "01101110";
 		when 2 =>months<="01000110"&--F February
 							  "01100101"&--e
 							  "01100010";							  
-							  
 		when 3 =>months<="01001101"&--M
 							  "01100001"&--a
 							  "01110010";--
@@ -343,6 +309,20 @@ begin
 		when others =>months<=(others=>'0');
 end case;
 
+case month is 
+      when 1      =>  endday<=31; ---31
+		when 3	=>	endday<=31; ---31
+		when 5	=>	endday<=31; ---31
+		when 7	=>	endday<=31; ---31
+		when 8	=>	endday<=31; ---31
+		when 10	=>	endday<=31; ---31
+		when 12	=>	endday<=31; ---31
+		when 4	=>	endday<=30;
+		when 6	=>	endday<=30;
+		when 9	=>	endday<=30;
+		when 11	=>	endday<=30;
+      when others	=>endday<=28;
+end case;
 end process;
 
 END behavior;
