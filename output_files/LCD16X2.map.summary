@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Tue Aug 17 02:02:57 2021
+Analysis & Synthesis Status : Successful - Tue Aug 17 02:46:05 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : LCD16X2
-Top-level Entity Name : top_level
+Top-level Entity Name : watch_lcd16x2
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 183

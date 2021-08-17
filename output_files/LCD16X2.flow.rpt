@@ -1,5 +1,5 @@
 Flow report for LCD16X2
-Tue Aug 17 02:04:44 2021
+Tue Aug 17 02:47:44 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Aug 17 02:04:44 2021       ;
+; Flow Status                     ; Successful - Tue Aug 17 02:47:44 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; LCD16X2                                     ;
-; Top-level Entity Name           ; top_level                                   ;
+; Top-level Entity Name           ; watch_lcd16x2                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEBA6U23I7                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 404 / 41,910 ( < 1 % )                      ;
-; Total registers                 ; 220                                         ;
+; Total registers                 ; 221                                         ;
 ; Total pins                      ; 19 / 314 ( 6 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
@@ -67,37 +67,33 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/17/2021 02:02:20 ;
+; Start date & time ; 08/17/2021 02:45:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LCD16X2             ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION  ; On                                     ; Off           ; --          ; --             ;
-; COMPILER_SIGNATURE_ID               ; 193866612709651.162918014005259        ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 100                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; -40                                    ; --            ; --          ; --             ;
-; MISC_FILE                           ; pll.cmp                                ; --            ; --          ; --             ;
-; MISC_FILE                           ; pll_sim/pll.vho                        ; --            ; --          ; --             ;
-; OPTIMIZATION_TECHNIQUE              ; Speed                                  ; Balanced      ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; top_level   ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; top_level   ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; top_level   ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-; SPD_FILE                            ; pll.spd                                ; --            ; --          ; --             ;
-; SYNTHESIS_ONLY_QIP                  ; On                                     ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; top_level                              ; LCD16X2       ; --          ; --             ;
-+-------------------------------------+----------------------------------------+---------------+-------------+----------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                              ;
++-------------------------------------+----------------------------------------+---------------+---------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name   ; Section Id     ;
++-------------------------------------+----------------------------------------+---------------+---------------+----------------+
+; ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION  ; On                                     ; Off           ; --            ; --             ;
+; COMPILER_SIGNATURE_ID               ; 193866612709651.162918274509125        ; --            ; --            ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --            ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --            ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --            ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 100                                    ; --            ; --            ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; -40                                    ; --            ; --            ; --             ;
+; OPTIMIZATION_TECHNIQUE              ; Speed                                  ; Balanced      ; --            ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; watch_lcd16x2 ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; watch_lcd16x2 ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; watch_lcd16x2 ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --            ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --            ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --            ; --             ;
+; TOP_LEVEL_ENTITY                    ; watch_lcd16x2                          ; LCD16X2       ; --            ; --             ;
++-------------------------------------+----------------------------------------+---------------+---------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -105,12 +101,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 1028 MB             ; 00:00:47                           ;
-; Fitter               ; 00:01:16     ; 1.0                     ; 2127 MB             ; 00:02:06                           ;
-; Assembler            ; 00:00:11     ; 1.0                     ; 955 MB              ; 00:00:10                           ;
-; Timing Analyzer      ; 00:00:13     ; 1.1                     ; 1200 MB             ; 00:00:12                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 1120 MB             ; 00:00:02                           ;
-; Total                ; 00:02:18     ; --                      ; --                  ; 00:03:17                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 1027 MB             ; 00:00:45                           ;
+; Fitter               ; 00:01:12     ; 1.0                     ; 2124 MB             ; 00:02:02                           ;
+; Assembler            ; 00:00:10     ; 1.0                     ; 955 MB              ; 00:00:10                           ;
+; Timing Analyzer      ; 00:00:10     ; 1.2                     ; 1200 MB             ; 00:00:12                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1120 MB             ; 00:00:02                           ;
+; Total                ; 00:01:53     ; --                      ; --                  ; 00:03:11                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

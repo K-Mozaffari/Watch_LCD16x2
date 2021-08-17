@@ -1,4 +1,4 @@
-|top_level
+|watch_lcd16x2
 clkin => year[0].CLK
 clkin => year[1].CLK
 clkin => year[2].CLK
@@ -335,7 +335,7 @@ led <= PWM:gcontraxt.Pwm_Out
 leddbkey <= constrastup.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top_level|PWM:gcontraxt
+|watch_lcd16x2|PWM:gcontraxt
 Pwm_Out <= pwm_value.DB_MAX_OUTPUT_PORT_TYPE
 Duty_Cycle[0] => LessThan1.IN10
 Duty_Cycle[1] => LessThan1.IN9
@@ -427,7 +427,7 @@ Enable => freq_count[16].ENA
 Enable => freq_count[17].ENA
 
 
-|top_level|lcd_controller:dut
+|watch_lcd16x2|lcd_controller:dut
 clk => e~reg0.CLK
 clk => lcd_data[0]~reg0.CLK
 clk => lcd_data[1]~reg0.CLK

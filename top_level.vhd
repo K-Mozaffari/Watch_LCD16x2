@@ -4,7 +4,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all;
 use ieee.Std_Logic_Arith.all;
-ENTITY top_level IS
+ENTITY watch_lcd16x2 IS
 	GENERIC (FRQ:INTEGER:=50000000);
   PORT(
         clkin           : IN    STD_LOGIC;  --system clock
@@ -18,9 +18,9 @@ ENTITY top_level IS
 	    led             :out    std_logic	;
         leddbkey        :out    std_logic
 			); --data signals for lcd
-END top_level;
+END watch_lcd16x2;
 
-ARCHITECTURE behavior OF top_level IS
+ARCHITECTURE behavior OF watch_lcd16x2 IS
   SIGNAL   lcd_enable : STD_LOGIC;
   SIGNAL   lcd_bus    : STD_LOGIC_VECTOR(9 DOWNTO 0);
   SIGNAL   lcd_busy   : STD_LOGIC;
@@ -48,17 +48,7 @@ signal dbkey,a:std_logic:='0';
        lcd_data   : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)); --data signals for lcd
   END COMPONENT;
 
--------------
-	component pll is
-		port (
-			refclk   : in  std_logic := 'X'; -- clk
-			rst      : in  std_logic := 'X'; -- reset
-			outclk_0 : out std_logic         -- clk
-		);
-	end component pll;
-
--------------------------------------------------------------------
-COMPONENT PWM  
+ COMPONENT PWM  
 Generic (
 	BIT_DEPTH	: integer := 8;
 	INPUT_CLK	: integer := 50000000; -- 50MHz
@@ -187,10 +177,12 @@ begin
 									min<=min+1;
 								else 
 									min<=0;
-									if hour<11 then 
+									if hour<12 	then 
 										hour<=hour+1;
-									else 
+									else  
 										hour<=1;
+									end if;
+									if hour=11 then 
 										if apm=am then 
 											apm<=pm;
 										else 
@@ -224,16 +216,19 @@ begin
 							end if;
 							
 					WHEN "0010"=> --set 	
-							if hour<11 	then 
-								hour<=hour+1;
-							else 
-								hour<=1;
-								if apm=am then 
-									apm<=pm;
-								else 
-									apm <=am;
+								if hour<12 	then 
+									hour<=hour+1;
+								else  
+									hour<=1;
+								end if;
+								if hour=11 then 
+									if apm=am then 
+										apm<=pm;
+									else 
+										apm <=am;
 								end if;
 							end if;
+
 								
 					WHEN "0100" => --set day
 							if day <endday then
